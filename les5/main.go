@@ -10,6 +10,6 @@ func main() {
 	fmt.Println("Скільки грошей треба витратити, щоб купити 9 яблук та 8 груш? ", 9*appleCost+float64(8*pearCost))
 
 	fmt.Println("Скільки груш ми можемо купити? ", totalOfMoney/pearCost)
-	fmt.Printf("Скільки яблук ми можемо купити?  %0.f\n", float64(totalOfMoney)/appleCost)
+	fmt.Println("Скільки яблук ми можемо купити? ", int(float64(totalOfMoney)/appleCost))
 	fmt.Printf("Чи ми можемо купити 2 груші та 2 яблука? %t\n", (float64(2*pearCost)+2*appleCost) <= float64(totalOfMoney))
 }
