@@ -7,16 +7,18 @@ import (
 )
 
 func main() {
-	s := "1 2 3 4 5"
+	input := "1 2 3 4 5"
 	var t = []int32{}
-	ss := strings.Fields(s)
+	var result string
+
+	ss := strings.Fields(input)
 	for _, v := range ss {
 		a, _ := strconv.Atoi(v)
 		t = append(t, int32(a))
 	}
 
 	if len(t) == 1 {
-		fmt.Println(t[0])
+		result = fmt.Sprint(t[0])
 	} else {
 		max, min := t[0], t[0]
 		for _, val := range t {
@@ -27,6 +29,7 @@ func main() {
 				min = val
 			}
 		}
-		fmt.Println(max, min)
+		result = fmt.Sprint(max, min)
 	}
+	fmt.Println(result)
 }
